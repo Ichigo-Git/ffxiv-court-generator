@@ -1,4 +1,4 @@
-# ffxiv-casefile-generator
+# ffxiv-court-generator
 
 FFXIVキャラクター紹介用の、非公式カードジェネレーターです。  
 キャラクター情報や交流スタンスを入力し、SS画像を組み合わせて、SNS投稿向けのカード画像を作成できます。
