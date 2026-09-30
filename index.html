@@ -196,29 +196,29 @@ const STARPTS=(()=>{const p=[];for(let k=0;k<10;k++){const r=k%2?21:50,a=(-90+k*
 /* ============ i18n ============ */
 const T={
 ja:{tag:'FF14 キャラクター紹介カードジェネレーター',pvhint:'ドラッグで画像を移動 / ホイール・ピンチで拡大縮小',secImg:'背景画像',pick:'画像を選ぶ',resetPos:'位置をリセット',zoom:'拡大',
- secBasic:'基本情報',name:'名前',race:'種族',dc:'データセンター',server:'サーバー',dcFree:'DC(自由入力)',serverFree:'サーバー(自由入力)',none:'― 未選択 ―',other:'その他(自由入力)',
+ secBasic:'基本情報',name:'名前',race:'種族',dc:'データセンター',server:'サーバー',dcFree:'DC(自由入力)',serverFree:'サーバー(自由入力)',none:'―',other:'その他(自由入力)',
  secJob:'ジョブ',jobTbl:'ジョブ略称',cust:'カスタム',mainJob:'メインジョブ',subJobs:'サブジョブ(タップで点灯)',allOn:'すべて点灯',allOff:'すべて消灯',
  secCard:'カード',num:'数字・絵札',numFree:'数字を入力(最大3桁)',customNum:'数字を入力',suit:'スート',note:'自由記載(3行まで)',noteWarn:'※3行を超えた分は表示されません',
  secDesign:'デザイン',type:'タイプ',classic:'クラシック',modern:'モダン',color:'背景色',density:'濃さ',cNavy:'ネイビー',cWine:'ワイン',cEmerald:'エメラルド',cPurple:'パープル',
  secExport:'書き出し',size:'サイズ',fmt:'形式',save:'画像を保存',light:'軽量',standard:'標準',high:'高画質',
  dlgHint:'保存されない場合は、画像を長押し(右クリック)して保存してください。',dlgSave:'もう一度保存',close:'閉じる',
- sSpade:'スペード',sHeart:'ハート',sDia:'ダイヤ',sClub:'クラブ',sample:'のんびり活動中\n撮影とハウジング好き\n気軽に声をかけてください'},
+ sSpade:'スペード',sHeart:'ハート',sDia:'ダイヤ',sClub:'クラブ',sample:'例）のんびり活動中\n撮影とハウジング好き\n気軽に声をかけてください'},
 en:{tag:'FFXIV CHARACTER CARD GENERATOR',pvhint:'Drag to move the image / wheel or pinch to zoom',secImg:'Background image',pick:'Choose image',resetPos:'Reset position',zoom:'Zoom',
- secBasic:'Profile',name:'Name',race:'Race',dc:'Data center',server:'World',dcFree:'DC (free input)',serverFree:'World (free input)',none:'— None —',other:'Other (free input)',
+ secBasic:'Profile',name:'Name',race:'Race',dc:'Data center',server:'World',dcFree:'DC (free input)',serverFree:'World (free input)',none:'―',other:'Other (free input)',
  secJob:'Jobs',jobTbl:'Job abbreviations',cust:'Custom',mainJob:'Main job',subJobs:'Sub jobs (tap to light up)',allOn:'Light all',allOff:'Clear',
  secCard:'Card',num:'Number / face card',numFree:'Number (up to 3 digits)',customNum:'Custom',suit:'Suit',note:'Free text (up to 3 lines)',noteWarn:'* Lines beyond 3 are not shown',
  secDesign:'Design',type:'Type',classic:'Classic',modern:'Modern',color:'Background color',density:'Density',cNavy:'Navy',cWine:'Wine',cEmerald:'Emerald',cPurple:'Purple',
  secExport:'Export',size:'Size',fmt:'Format',save:'Save image',light:'Light',standard:'Standard',high:'High quality',
  dlgHint:'If it does not download, press and hold (or right-click) the image to save it.',dlgSave:'Save again',close:'Close',
- sSpade:'Spades',sHeart:'Hearts',sDia:'Diamonds',sClub:'Clubs',sample:'Screenshots and housing.\nPlaying at my own pace.\nFeel free to say hi!'},
+ sSpade:'Spades',sHeart:'Hearts',sDia:'Diamonds',sClub:'Clubs',sample:'e.g. Screenshots and housing.\nPlaying at my own pace.\nFeel free to say hi!'},
 ko:{tag:'FF14 캐릭터 소개 카드 생성기',pvhint:'드래그로 이미지 이동 / 휠·핀치로 확대·축소',secImg:'배경 이미지',pick:'이미지 선택',resetPos:'위치 초기화',zoom:'확대',
- secBasic:'기본 정보',name:'이름',race:'종족',dc:'데이터 센터',server:'서버',dcFree:'DC (직접 입력)',serverFree:'서버 (직접 입력)',none:'― 선택 안 함 ―',other:'기타 (직접 입력)',
+ secBasic:'기본 정보',name:'이름',race:'종족',dc:'데이터 센터',server:'서버',dcFree:'DC (직접 입력)',serverFree:'서버 (직접 입력)',none:'―',other:'기타 (직접 입력)',
  secJob:'직업',jobTbl:'직업 약칭',cust:'사용자 지정',mainJob:'메인 직업',subJobs:'서브 직업 (눌러서 점등)',allOn:'모두 점등',allOff:'모두 끄기',
  secCard:'카드',num:'숫자·그림 카드',numFree:'숫자 입력 (최대 3자리)',customNum:'직접 입력',suit:'무늬',note:'자유 기재 (3줄까지)',noteWarn:'※ 3줄을 넘는 부분은 표시되지 않습니다',
  secDesign:'디자인',type:'타입',classic:'클래식',modern:'모던',color:'배경색',density:'진하기',cNavy:'네이비',cWine:'와인',cEmerald:'에메랄드',cPurple:'퍼플',
  secExport:'저장',size:'크기',fmt:'형식',save:'이미지 저장',light:'경량',standard:'표준',high:'고화질',
  dlgHint:'저장되지 않으면 이미지를 길게 누르거나(우클릭) 저장하세요.',dlgSave:'다시 저장',close:'닫기',
- sSpade:'스페이드',sHeart:'하트',sDia:'다이아',sClub:'클럽',sample:'느긋하게 활동 중\n스크린샷과 하우징을 좋아해요\n편하게 말 걸어주세요'}
+ sSpade:'스페이드',sHeart:'하트',sDia:'다이아',sClub:'클럽',sample:'예) 느긋하게 활동 중\n스크린샷과 하우징을 좋아해요\n편하게 말 걸어주세요'}
 };
 const qs=new URLSearchParams(location.search);
 let LANG=(qs.get('lang')||((navigator.language||'en').slice(0,2)))||'en'; if(!T[LANG])LANG='en';
@@ -227,9 +227,9 @@ const LI={ja:1,en:0,ko:2};
 function withRead(en,ja,ko){ if(LANG==='ja')return `${en.toUpperCase()}（${ja}）`; if(LANG==='ko')return `${en.toUpperCase()} (${ko})`; return en.toUpperCase(); }
 
 /* ============ state ============ */
-const S={type:'A',color:'navy',cust:{h:215,s:.55,v:.42},density:65,name:'Nagi Lustario',race:"Miqo'te",dc:'Mana',server:'Titan',dcFree:'',serverFree:'',
- main:'PLD',subs:new Set(['WAR','GNB','WHM','SCH','NIN','SAM','BRD','RDM','BLM','PCT']),labSel:'custom',numIn:'100',suit:'s',note:T[LANG].sample,zoom:1,nx:.5,ny:.5,noteOverflow:false};
-let noteIsSample=true;
+const S={zmin:1,type:'A',color:'navy',cust:{h:215,s:.55,v:.42},density:65,name:'Ichigo Git',race:'',dc:'',server:'',dcFree:'',serverFree:'',
+ main:'',subs:new Set(),labSel:'custom',numIn:'100',suit:'s',note:T[LANG].sample,zoom:1,nx:.5,ny:.5,noteOverflow:false};
+let noteIsSample=true,nameIsDefault=true;
 const $=id=>document.getElementById(id);
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 
@@ -246,17 +246,20 @@ function setImage(img){
   let src=img;
   if(k<1){const c=document.createElement('canvas');c.width=Math.round(w*k);c.height=Math.round(h*k);const x=c.getContext('2d');x.imageSmoothingQuality='high';x.drawImage(img,0,0,c.width,c.height);src=c;w=c.width;h=c.height;}
   IMG.w=w;IMG.h=h;IMG.mips=buildMips(src,w,h);
+  {const ar=w/h,bh=Math.max(125,100/ar);S.zmin=Math.min(1,100/(bh*ar),125/bh);$('zoom').min=Math.round(S.zmin*100);}
   S.zoom=1;S.nx=.5;S.ny=.5;$('zoom').value=100;
   cache.outer=cache.base=null;
   draw();
 }
-function bgRect(){
-  const ar=IMG.w/IMG.h,bh=Math.max(125,100/ar),h=bh*S.zoom,w=h*ar;
+function rectFor(z,resync){
+  const ar=IMG.w/IMG.h,bh=Math.max(125,100/ar),h=bh*z,w=h*ar;
   let x=50-S.nx*w,y=62.5-S.ny*h;
-  x=clamp(x,100-w,0);y=clamp(y,125-h,0);
-  S.nx=(50-x)/w;S.ny=(62.5-y)/h;
+  x=w>=100?clamp(x,100-w,0):clamp(x,0,100-w);
+  y=h>=125?clamp(y,125-h,0):clamp(y,0,125-h);
+  if(resync){S.nx=(50-x)/w;S.ny=(62.5-y)/h;}
   return {x,y,w,h};
 }
+const bgRect=()=>rectFor(S.zoom,true);
 
 /* ============ canvas helpers ============ */
 const HL=.21;
@@ -347,12 +350,12 @@ function render(cv,W){
   const base=baseRGB(),d=S.density;
   const a0=.10+.0056*d,a1=Math.min(.96,.30+.0074*d),amid=(a0+a1)/2,tsa=.65*(1-d/100);
   const rgb=a=>`rgba(${base},${a})`;
-  const R=bgRect(),m=2.8;
+  const R=bgRect(),Rc=rectFor(Math.max(S.zoom,1),false),m=2.8;
   const wx=m*u,wy=m*u,ww=(100-2*m)*u,wh=(125-2*m)*u;
   const label=resolveLabel(),isJ=label==='JOKER',suit=S.suit;
 
   /* 1 outer */
-  c.drawImage(blurLayer('outer',W,H,2.2,1.08,R),0,0,W,H);
+  c.drawImage(blurLayer('outer',W,H,2.2,1.08,Rc),0,0,W,H);
   c.fillStyle=rgb(.55);c.fillRect(0,0,W,H);
   c.save();c.globalAlpha=.10;c.strokeStyle='#fff';c.lineWidth=HL*u;c.beginPath();
   const P=3.4*Math.SQRT2*u;
@@ -362,7 +365,7 @@ function render(cv,W){
 
   /* 2 window */
   c.save();c.beginPath();c.rect(wx,wy,ww,wh);c.clip();
-  c.drawImage(blurLayer('base',W,H,3.6,1.1,R),0,0,W,H);
+  c.drawImage(blurLayer('base',W,H,3.6,1.1,Rc),0,0,W,H);
   if(A){c.fillStyle=rgb(amid);c.fillRect(wx,wy,ww,wh);}
   else{
     c.save();c.translate(50*u,57.724*u);c.scale(1,52/62);
@@ -580,8 +583,8 @@ cv.addEventListener('pointermove',e=>{
 const endp=e=>{ptrs.delete(e.pointerId);if(!ptrs.size)cv.classList.remove('drag');pinch=0;};
 cv.addEventListener('pointerup',endp);cv.addEventListener('pointercancel',endp);
 cv.addEventListener('wheel',e=>{e.preventDefault();setZoom(S.zoom*Math.exp(-e.deltaY*.0012));draw();},{passive:false});
-function setZoom(z){S.zoom=clamp(z,1,4);$('zoom').value=Math.round(S.zoom*100);}
-$('zoom').addEventListener('input',e=>{S.zoom=clamp(+e.target.value/100,1,4);draw();});
+function setZoom(z){S.zoom=clamp(z,S.zmin,4);$('zoom').value=Math.round(S.zoom*100);}
+$('zoom').addEventListener('input',e=>{S.zoom=clamp(+e.target.value/100,S.zmin,4);draw();});
 $('resetPos').onclick=()=>{S.zoom=1;S.nx=.5;S.ny=.5;$('zoom').value=100;draw();};
 /* file */
 function loadFile(f){
@@ -691,7 +694,8 @@ function applyLang(){
 $('langSeg').addEventListener('click',e=>{const l=e.target.dataset&&e.target.dataset.l;if(l){LANG=l;applyLang();}});
 $('typeSeg').addEventListener('click',e=>{const t=e.target.dataset&&e.target.dataset.t;if(t){S.type=t;syncType();draw();}});
 function syncType(){document.querySelectorAll('#typeSeg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.t===S.type));}
-$('name').addEventListener('input',e=>{S.name=e.target.value;draw();});
+$('name').addEventListener('focus',()=>{if(nameIsDefault)$('name').select();});
+$('name').addEventListener('input',e=>{S.name=e.target.value;nameIsDefault=false;draw();});
 $('race').addEventListener('change',e=>{S.race=e.target.value;draw();});
 $('dc').addEventListener('change',e=>{S.dc=e.target.value;S.server='';buildServers();draw();});
 $('server').addEventListener('change',e=>{S.server=e.target.value;draw();});
@@ -702,6 +706,7 @@ $('allOn').onclick=()=>{[...TOP,...BOT].flat().forEach(k=>S.subs.add(k));buildCh
 $('allOff').onclick=()=>{S.subs.clear();buildChips();draw();};
 $('lab').addEventListener('change',e=>{S.labSel=e.target.value;$('numWrap').classList.toggle('hide',S.labSel!=='custom');draw();});
 $('numIn').addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,3);S.numIn=e.target.value;draw();});
+$('note').addEventListener('focus',()=>{if(noteIsSample)$('note').select();});
 $('note').addEventListener('input',e=>{S.note=e.target.value;noteIsSample=false;draw();});
 $('den').addEventListener('input',e=>{S.density=+e.target.value;draw();});
 $('size').addEventListener('change',sizeNote);
