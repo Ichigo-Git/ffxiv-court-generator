@@ -573,7 +573,7 @@ cv.addEventListener('pointermove',e=>{
   const rect=cv.getBoundingClientRect(),uPerPx=100/rect.width;
   if(ptrs.size===1){
     const R=bgRect();S.nx-=(e.clientX-p.x)*uPerPx/R.w;S.ny-=(e.clientY-p.y)*uPerPx/R.h;
-    S.nx=clamp(S.nx,0,1);S.ny=clamp(S.ny,0,1);
+    S.nx=clamp(S.nx,-30/R.w,1+30/R.w);S.ny=clamp(S.ny,-37.5/R.h,1+37.5/R.h);
     p.x=e.clientX;p.y=e.clientY;
   }else if(ptrs.size===2){
     p.x=e.clientX;p.y=e.clientY;const[a,b]=[...ptrs.values()],dd=Math.hypot(a.x-b.x,a.y-b.y);
