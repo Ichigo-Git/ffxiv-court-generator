@@ -251,15 +251,16 @@ function setImage(img){
   cache.outer=cache.base=null;
   draw();
 }
-function rectFor(z,resync){
+function rectFor(z,cover){
   const ar=IMG.w/IMG.h,bh=Math.max(125,100/ar),h=bh*z,w=h*ar;
   let x=50-S.nx*w,y=62.5-S.ny*h;
-  x=w>=100?clamp(x,100-w,0):clamp(x,0,100-w);
-  y=h>=125?clamp(y,125-h,0):clamp(y,0,125-h);
-  if(resync){S.nx=(50-x)/w;S.ny=(62.5-y)/h;}
+  if(cover){ /* background blur layers must always fill the card */
+    x=w>=100?clamp(x,100-w,0):clamp(x,0,100-w);
+    y=h>=125?clamp(y,125-h,0):clamp(y,0,125-h);
+  }
   return {x,y,w,h};
 }
-const bgRect=()=>rectFor(S.zoom,true);
+const bgRect=()=>rectFor(S.zoom,false);
 
 /* ============ canvas helpers ============ */
 const HL=.21;
@@ -350,7 +351,7 @@ function render(cv,W){
   const base=baseRGB(),d=S.density;
   const a0=.10+.0056*d,a1=Math.min(.96,.30+.0074*d),amid=(a0+a1)/2,tsa=.65*(1-d/100);
   const rgb=a=>`rgba(${base},${a})`;
-  const R=bgRect(),Rc=rectFor(Math.max(S.zoom,1),false),m=2.8;
+  const R=bgRect(),Rc=rectFor(Math.max(S.zoom,1),true),m=2.8;
   const wx=m*u,wy=m*u,ww=(100-2*m)*u,wh=(125-2*m)*u;
   const label=resolveLabel(),isJ=label==='JOKER',suit=S.suit;
 
