@@ -199,7 +199,7 @@ ja:{tag:'FF14 キャラクター紹介カードジェネレーター',pvhint:'�
  secBasic:'基本情報',name:'名前',race:'種族',dc:'データセンター',server:'サーバー',dcFree:'DC(自由入力)',serverFree:'サーバー(自由入力)',none:'―',other:'その他(自由入力)',
  secJob:'ジョブ',jobTbl:'ジョブ略称',cust:'カスタム',mainJob:'メインジョブ',subJobs:'サブジョブ(タップで点灯)',allOn:'すべて点灯',allOff:'すべて消灯',
  secCard:'カード',num:'数字・絵札',numFree:'数字を入力(最大3桁)',customNum:'数字を入力',suit:'スート',note:'自由記載(3行まで)',noteWarn:'※3行を超えた分は表示されません',
- secDesign:'デザイン',type:'タイプ',classic:'クラシック',modern:'モダン',color:'背景色',density:'濃さ',cNavy:'ネイビー',cWine:'ワイン',cEmerald:'エメラルド',cPurple:'パープル',
+ secDesign:'デザイン',type:'タイプ',classic:'タイプA',modern:'タイプB',color:'基本色',density:'透明度',cNavy:'青',cWine:'赤',cEmerald:'緑',cPurple:'紫',
  secExport:'書き出し',size:'サイズ',fmt:'形式',save:'画像を保存',light:'軽量',standard:'標準',high:'高画質',
  dlgHint:'保存されない場合は、画像を長押し(右クリック)して保存してください。',dlgSave:'もう一度保存',close:'閉じる',
  sSpade:'スペード',sHeart:'ハート',sDia:'ダイヤ',sClub:'クラブ',sample:'例）のんびり活動中\n撮影とハウジング好き\n気軽に声をかけてください'},
@@ -207,7 +207,7 @@ en:{tag:'FFXIV CHARACTER CARD GENERATOR',pvhint:'Drag to move the image / wheel 
  secBasic:'Profile',name:'Name',race:'Race',dc:'Data center',server:'World',dcFree:'DC (free input)',serverFree:'World (free input)',none:'―',other:'Other (free input)',
  secJob:'Jobs',jobTbl:'Job abbreviations',cust:'Custom',mainJob:'Main job',subJobs:'Sub jobs (tap to light up)',allOn:'Light all',allOff:'Clear',
  secCard:'Card',num:'Number / face card',numFree:'Number (up to 3 digits)',customNum:'Custom',suit:'Suit',note:'Free text (up to 3 lines)',noteWarn:'* Lines beyond 3 are not shown',
- secDesign:'Design',type:'Type',classic:'Classic',modern:'Modern',color:'Background color',density:'Density',cNavy:'Navy',cWine:'Wine',cEmerald:'Emerald',cPurple:'Purple',
+ secDesign:'Design',type:'Type',classic:'Type A',modern:'Type B',color:'Base color',density:'Transparency',cNavy:'Blue',cWine:'Red',cEmerald:'Green',cPurple:'Purple',
  secExport:'Export',size:'Size',fmt:'Format',save:'Save image',light:'Light',standard:'Standard',high:'High quality',
  dlgHint:'If it does not download, press and hold (or right-click) the image to save it.',dlgSave:'Save again',close:'Close',
  sSpade:'Spades',sHeart:'Hearts',sDia:'Diamonds',sClub:'Clubs',sample:'e.g. Screenshots and housing.\nPlaying at my own pace.\nFeel free to say hi!'},
@@ -215,7 +215,7 @@ ko:{tag:'FF14 캐릭터 소개 카드 생성기',pvhint:'드래그로 이미지 
  secBasic:'기본 정보',name:'이름',race:'종족',dc:'데이터 센터',server:'서버',dcFree:'DC (직접 입력)',serverFree:'서버 (직접 입력)',none:'―',other:'기타 (직접 입력)',
  secJob:'직업',jobTbl:'직업 약칭',cust:'사용자 지정',mainJob:'메인 직업',subJobs:'서브 직업 (눌러서 점등)',allOn:'모두 점등',allOff:'모두 끄기',
  secCard:'카드',num:'숫자·그림 카드',numFree:'숫자 입력 (최대 3자리)',customNum:'직접 입력',suit:'무늬',note:'자유 기재 (3줄까지)',noteWarn:'※ 3줄을 넘는 부분은 표시되지 않습니다',
- secDesign:'디자인',type:'타입',classic:'클래식',modern:'모던',color:'배경색',density:'진하기',cNavy:'네이비',cWine:'와인',cEmerald:'에메랄드',cPurple:'퍼플',
+ secDesign:'디자인',type:'타입',classic:'타입 A',modern:'타입 B',color:'기본색',density:'투명도',cNavy:'파랑',cWine:'빨강',cEmerald:'초록',cPurple:'보라',
  secExport:'저장',size:'크기',fmt:'형식',save:'이미지 저장',light:'경량',standard:'표준',high:'고화질',
  dlgHint:'저장되지 않으면 이미지를 길게 누르거나(우클릭) 저장하세요.',dlgSave:'다시 저장',close:'닫기',
  sSpade:'스페이드',sHeart:'하트',sDia:'다이아',sClub:'클럽',sample:'예) 느긋하게 활동 중\n스크린샷과 하우징을 좋아해요\n편하게 말 걸어주세요'}
@@ -645,7 +645,7 @@ const hex2=n=>n.toString(16).padStart(2,'0');
 function custHex(){const c=hsv2rgb(S.cust.h,S.cust.s,S.cust.v);return '#'+c.map(hex2).join('');}
 function buildSw(){
   const box=$('sw');box.innerHTML='';
-  [['navy','cNavy'],['wine','cWine'],['emerald','cEmerald'],['purple','cPurple'],['custom','cust']].forEach(([k,n])=>{
+  [['navy','cNavy'],['emerald','cEmerald'],['purple','cPurple'],['wine','cWine'],['custom','cust']].forEach(([k,n])=>{
     const b=document.createElement('button');b.title=tr(n);b.setAttribute('aria-label',tr(n));
     if(k==='custom')b.className='cu';else{b.style.background=`rgb(${BASES[k]})`;b.style.filter='brightness(1.6)';}
     b.setAttribute('aria-pressed',S.color===k);
@@ -709,7 +709,7 @@ $('lab').addEventListener('change',e=>{S.labSel=e.target.value;$('numWrap').clas
 $('numIn').addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,3);S.numIn=e.target.value;draw();});
 $('note').addEventListener('focus',()=>{if(noteIsSample)$('note').select();});
 $('note').addEventListener('input',e=>{S.note=e.target.value;noteIsSample=false;draw();});
-$('den').addEventListener('input',e=>{S.density=+e.target.value;draw();});
+$('den').addEventListener('input',e=>{S.density=100-(+e.target.value);draw();});
 $('size').addEventListener('change',sizeNote);
 window.addEventListener('resize',draw);
 
@@ -743,7 +743,7 @@ $('dlgClose').onclick=()=>$('dlg').close();
 $('dlg').addEventListener('click',e=>{if(e.target===$('dlg'))$('dlg').close();});
 
 /* ============ init ============ */
-$('name').value=S.name;$('numIn').value=S.numIn;$('den').value=S.density;$('note').value=S.note;
+$('name').value=S.name;$('numIn').value=S.numIn;$('den').value=100-S.density;$('note').value=S.note;
 buildChips();syncType();applyLang();
 (async()=>{
   const im=new Image();
