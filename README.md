@@ -31,7 +31,7 @@ https://ichigo-git.github.io/ffxiv-court-generator/
 - 背景色4種＋カスタムカラー / Four preset background colors + custom color / 배경색 4종 + 사용자 지정 색상
 - 日本語 / 英語 / 韓国語表示切り替え / Japanese / English / Korean display toggle / 일본어 / 영어 / 한국어 표시 전환
 - PNG / JPG形式での画像出力 / Export as PNG or JPG / PNG / JPG 형식으로 이미지 출력
-- 3種類の出力サイズ / Three export sizes / 3가지 출력 크기
+- 3種類の出力サイズ / Three export sizes / 3가지 출력 사이즈
 
 ## データの取り扱い / Data Handling / 데이터 처리
 
