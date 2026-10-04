@@ -112,6 +112,6 @@ Future updates may be made at the creator’s discretion.
 
 ## 更新履歴 / Changelog / 변경 이력
 
-### 2026-10-XX
+### 2026-10-05
 
-- 公開版をリリース / Initial public release
+- 公開版をリリース / Initial public release / 공개 버전 출시
